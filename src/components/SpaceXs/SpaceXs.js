@@ -12,7 +12,7 @@ const SpaceXs = () => {
 
     return (
         <div>
-            {ships.map(ship => <SpaceX key = {ship.flight_number} ship = {ship}/>)}
+            {ships.filter((ship => ship.launch_year !== '2020')).map((ship, index) => <SpaceX key = {index} ship = {ship}/>)}
 
         </div>
     );

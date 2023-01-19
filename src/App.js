@@ -1,9 +1,10 @@
-import {SpaceX} from "./components/SpaceX/SpaceX";
+
+import {SpaceXs} from "./components/SpaceXs/SpaceXs";
 
 const App = () => {
   return (
     <div>
-        <SpaceX/>
+        <SpaceXs/>
     </div>
   );
 }
