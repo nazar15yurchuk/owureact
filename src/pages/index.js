@@ -1,0 +1,6 @@
+export * from './albumsPage'
+export * from './commentsPage'
+export * from './notFoundPage'
+export * from './todosPage'
+export * from './homePage'
+export * from './PostsPage'
