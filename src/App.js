@@ -4,12 +4,12 @@ import {carService} from "./services";
 
 const App = () => {
     const [cars, setCars] = useState([])
-    const [updateCar, setUpdateCar] = useState([])
+    const [updateCar, setUpdateCar] = useState(null)
 
 
     useEffect(() => {
         carService.getAll().then(value => value.data).then(value => setCars([...value]))
-    }, [])
+    }, [cars])
 
   return (
     <div>

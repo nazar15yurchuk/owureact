@@ -30,7 +30,7 @@ const CarForm = ({setCars, updateCar}) => {
         const {data} = await carService.updateById(updateCar.id, car)
         if(Object.keys(data).length){
         const {data} = await carService.getAll()
-            setCars(data)
+            setCars([...data])
             reset()
         }
     }
