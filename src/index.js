@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import {setupStore} from "./redux";
+import {Provider} from "react-redux";
+import {unstable_HistoryRouter as BrowserRouter} from "react-router-dom";
+import {history} from "./services"
+
 import {App} from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let store = setupStore();
+
 root.render(
-
-    <App />
-
+    <Provider store={store}>
+        <BrowserRouter history={history}>
+            <App/>
+        </BrowserRouter>
+    </Provider>
 );
 
-
-reportWebVitals();
